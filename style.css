@@ -82,6 +82,29 @@ li{
 	margin-right: 4px;
 	text-align: center;
 }
+body > .status-bar i{
+	background-color: #eee;
+	width: 18px;
+	height: 18px;
+	margin-top: 2px;
+	border-radius: 4px;
+	line-height: 16px;
+}
+body > .status-bar i:before{
+	content: 'Pt';
+	color: #555;
+	font-size: 12px;
+	font-style: normal;
+}
+body > .status-bar img{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-top: 3px;
+	margin-left: 8px;
+	margin-right: 8px;
+	text-align: center;
+}
 
 #hora{
 	font-size: 12px;
