@@ -136,6 +136,7 @@ li{
 	text-align: center;
 	text-shadow: 0px 0px 4px black;
 	cursor: pointer;
+	margin-bottom: 10px;
 }
 
 #files .file img{
@@ -275,6 +276,10 @@ li{
 	margin-top: 20px;
 }
 
+#janela-portifolio .folha h2{
+	margin-top: 0px;
+}
+
 #janela-portifolio .folha{
 	display: none;
 	overflow: auto;
@@ -283,7 +288,7 @@ li{
 
 #janela-portifolio .folha img{
 	height: 100%;
-	width: 250px; 
+	width: 230px; 
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -310,7 +315,7 @@ li{
 }
 
 #janela-portifolio[data-slide="1"] #folha-1{
-	background-color: #cce3ff;
+	background-color: #ffe2e0;
 	display: block;
 }
 #janela-portifolio[data-slide="2"] #folha-2{
@@ -318,7 +323,7 @@ li{
 	display: block;
 }
 #janela-portifolio[data-slide="3"] #folha-3{
-	background-color: #e0ffe3;
+	background-color: #cce3ff;
 	display: block;
 }
 /* CLASSES DE EVENTOS */
@@ -362,4 +367,75 @@ body.show-portifolio #libreoffice-presentation:before{
 
 	margin-left: -4px;
 	top: calc(50% - 2px);
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 980px){
+	.folha{	
+		width: calc(100% - 30px);
+	}
+}
+
+@media (max-width: 810px){
+	.folha{	
+		width: calc(100% - 30px);
+	}
+}
+@media (max-width: 809px) and (min-width: 630px){
+	.janela{
+		top: 10%;
+		left: calc(10% + 28px);
+		width: 80%;
+		height: 80%;
+	}
+
+	#janela-portifolio .folha img{
+		width: 180px;
+	}
+}
+@media (max-width: 629px) and (min-width: 500px){
+	.janela{
+		top: 25px;
+		left: 56px;
+		width: calc(100% - 56px);
+		height: calc(100% - 25px);
+	}
+
+	#janela-portifolio .folha img{
+		width: 180px;
+	}
+}
+@media (max-width: 499px){	
+	h1 {
+		font-size: 22px;
+	}
+	h2 {
+		font-size: 16px;
+		text-align: center;
+	}
+	.janela{
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 11;
+	}
+	#janela-portifolio .folha img{
+		height: 150px;
+		display: block;
+		float: none;
+		padding-right: 0px;
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 440px){
+	body > .status-bar{
+	    justify-content: flex-end;
+	}
+	body > .status-bar > .descricao{
+		display: none;
+	}
 }
