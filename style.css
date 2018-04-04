@@ -1,0 +1,365 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: arial;
+	user-select: none;
+	font-size: 14px;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	min-height: 100%;
+	min-width: 100%;
+	position: relative;
+}
+
+body {
+	background-image: url('img/fundo.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 65px 40px 40px 96px;
+}
+
+h1 {
+	font-size: 26px;
+	margin-bottom: 15px;
+}
+
+h2 {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+ul{
+	padding-left: 18px;
+	margin-bottom: 10px;
+}
+li{
+	margin-bottom: 5px;
+}
+
+/* CLASSES DE AUXILIO NA FORMATAÇÃO*/
+
+.text-center{
+	text-align: center;
+}
+
+.sm-text {
+	font-size: 12px;
+}
+/* Fim das classes de auxilio*/
+
+.status-bar{
+	background: linear-gradient(to top, #222, #555);
+	box-shadow: 0 0px 1px #555;
+	color: #eee;
+	z-index: 10;
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 25px;
+	line-height: 23px;
+	padding: 1px 5px;
+}
+
+.status-bar .descricao{
+	flex-grow: 1;
+}
+
+.status-bar i{
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	margin-left: 4px;
+	margin-right: 4px;
+	text-align: center;
+}
+
+#hora{
+	font-size: 12px;
+}
+
+#tool-bar{
+	background-color: rgba(4, 63, 136, 0.51);
+	box-shadow: 0 0px 1px #ddd;
+	z-index: 9;
+	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	width: 56px;
+	padding: 25px 5px 5px 5px;
+	text-align: center;
+}
+
+#tool-bar div{
+	position: relative;
+}
+#tool-bar img{
+	object-fit: contain;
+	object-position: center;
+	opacity: 0.9;
+	height: 46px;
+	width: 46px;
+	padding: 3px;
+	background: linear-gradient(to top, rgba(225, 225, 225, 0.1), transparent, rgba(255, 255, 255, 0.5)),  linear-gradient(to right, rgba(225, 225, 225, 0.1), transparent, rgba(225, 225, 225, 0.1));
+	margin: 6px 0 0;
+	border-radius: 5px;
+}
+
+#tool-bar .push{
+	flex-grow: 1;
+}
+
+#files{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#files .file{
+	color: #fff;
+	width: 120px;
+	text-align: center;
+	text-shadow: 0px 0px 4px black;
+	cursor: pointer;
+}
+
+#files .file img{
+	object-fit: contain;
+	object-position: center;
+	height: 48px;
+	width: 48px;
+}
+
+#files .file:hover img{
+	filter: brightness(120%);
+}
+
+#files .file p{
+	border-radius: 5px;
+	padding: 2px 7px;
+}
+
+#files .file:active p{
+	background-color: rgba(255, 120, 0, .5);
+}
+
+.janela{
+	position: absolute;
+	opacity: 0;
+	display: none;
+	top: 15%;
+	left: calc(15% + 28px);
+	width: 70%;
+	height: 70%;
+	border-radius: 8px 8px 0 0;
+	overflow: hidden;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.7);
+	transition: 0.1s linear opacity;
+}
+.janela .status-bar i{
+	font-style: normal;
+	text-align: center;
+	border-radius: 50%;
+	margin-top: 3px;
+	vertical-align: middle;
+	padding:0px;
+	height: 15px;
+	line-height: 12px;
+	width: 15px;
+	margin-right: 0px;
+	background: linear-gradient(to top, #555, #888);
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.7);
+	color: #444;
+}
+.janela .status-bar i:hover{
+	background: linear-gradient(to top, #777, #aaa);
+}
+
+.janela .status-bar i.fechar{
+	background: linear-gradient(to top, #CC4514, #EEAA7C);
+}
+.janela .status-bar i.fechar:hover{
+	background: linear-gradient(to top, #CC7337, #EEBB99);
+}
+
+.janela .status-bar i.fechar:before{
+	content: 'x';
+	height: 13px;
+	display: inline-block;
+	line-height: 12px;
+	font-size: 12px;
+}
+
+.janela .status-bar i.minimizar:before{
+	content: '';
+	display: inline-block;
+	height: 1px;
+	width: 8px;
+	background-color: #444;
+	vertical-align: middle;
+}
+
+.janela .status-bar i.maximizar:before{
+	content: '';
+	display: inline-block;
+	height: 5px;
+	width: 5px;
+	border: 1px solid #444;
+	vertical-align: middle;
+}
+
+.janela .descricao{
+	padding-left: 10px;
+}
+
+#janela-curriculo, #janela-portifolio{
+	background-color: #ddd;
+	padding: 25px 0px 25px 0px;
+	color: #333;
+}
+
+.janela .janela-conteudo{
+	padding: 15px 0px 15px 0px;
+	overflow-y: auto;
+	height: 100%;
+}
+
+.janela .janela-footer{
+	background-color: #fff;
+	position: absolute;
+	bottom: 0px;
+	height: 25px;
+	width: 100%;
+	display: flex;
+	padding: 1px 0px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.janela .janela-footer p{
+	flex-grow: 1;
+	line-height: 23px;
+	text-align: center;
+}
+
+.janela .janela-footer p+p{
+	border-left: 1px solid rgba(0,0,0,0.2);
+}
+
+.folha{
+	background-color: #fff;
+	width: 80%;
+	margin: 0 auto;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+	padding: 30px;
+}
+
+.folha p{
+	margin-bottom: 10px;
+}
+
+.folha h2{
+	margin-top: 20px;
+}
+
+#janela-portifolio .folha{
+	display: none;
+	overflow: auto;
+	height: calc(100% - 30px);
+}
+
+#janela-portifolio .folha img{
+	height: 100%;
+	width: 250px; 
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	object-fit: contain;
+	object-position: center;
+	padding: 0 15px 0 0;
+	float: left;
+}
+
+#janela-portifolio .slide-control{
+	display: flex;
+	height: 30px;
+	align-items: center;
+}
+
+#janela-portifolio .slide-control div{
+	flex-grow: 1;
+	text-align: center;
+}
+
+#janela-portifolio .slide-control div span{
+	display: inline-block;
+	cursor: pointer;
+}
+
+#janela-portifolio[data-slide="1"] #folha-1{
+	background-color: #cce3ff;
+	display: block;
+}
+#janela-portifolio[data-slide="2"] #folha-2{
+	background-color: #ffff94;
+	display: block;
+}
+#janela-portifolio[data-slide="3"] #folha-3{
+	background-color: #e0ffe3;
+	display: block;
+}
+/* CLASSES DE EVENTOS */
+
+body.show-curriculo #janela-curriculo{
+	opacity: 1;
+	display: block;
+	transition: 0.1s linear opacity;
+}
+
+body.show-curriculo #libreoffice-writer:before{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	z-index: 11;
+	border-left: 3px solid #fff;
+	border-right: 3px solid transparent;
+	border-top: 3px solid transparent;
+	border-bottom: 3px solid transparent;
+
+	margin-left: -4px;
+	top: calc(50% - 2px);
+}
+
+
+body.show-portifolio #janela-portifolio{
+	opacity: 1;
+	display: block;
+	transition: 0.1s linear opacity;
+}
+
+body.show-portifolio #libreoffice-presentation:before{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	z-index: 11;
+	border-left: 3px solid #fff;
+	border-right: 3px solid transparent;
+	border-top: 3px solid transparent;
+	border-bottom: 3px solid transparent;
+
+	margin-left: -4px;
+	top: calc(50% - 2px);
+}

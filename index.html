@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Murilo Spinoza de Arruda</title>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<body>
+
+		<div class="status-bar">
+			<p class="descricao">Murilo Spinoza de Arruda - Desktop Ubuntu</p>
+			<i>w</i>
+			<i>i</i>
+			<i>v</i>
+			<p id="hora"></p>
+			<i>c</i>
+		</div>
+
+		<div id="tool-bar">
+			<div id="file-manager">
+				<img src="img/app/file-manager.svg">
+			</div>
+			<div id="terminal">
+				<img src="img/app/terminal.svg">
+			</div>
+			<div id="google">
+				<img src="img/app/google.png">
+			</div>
+			<div id="sublime-text">
+				<img src="img/app/sublime-text.png">
+			</div>
+			<!-- <div id="spotify">
+				<img src="img/app/spotify.png">
+			</div> -->
+			<div id="libreoffice-writer">
+				<img src="img/app/libreoffice-writer.png">
+			</div>
+			<div id="libreoffice-presentation">
+				<img src="img/app/libreoffice-presentation.png">
+			</div>
+			<div class="push"></div>
+			<div id="trash">
+				<img src="img/app/trash.svg">
+			</div>
+		</div>
+
+		<div id="files">
+			<div class="file" onclick="abreJanela('show-curriculo')">
+				<img src="img/app/application-msword.svg">
+				<p>meu-curriculo.docx</p>
+			</div>
+
+			<div class="file" onclick="abreJanela('show-portifolio')">
+				<img src="img/app/application-mspowerpoint.svg">
+				<p>projetos.ppt</p>
+			</div>
+		</div>
+
+		<div class="janela" id="janela-curriculo">
+			<div class="status-bar">
+				<i class="fechar" onclick="fechaJanela('show-curriculo')"></i>
+				<i class="minimizar"></i>
+				<i class="maximizar"></i>
+				<p class="descricao">meu-curriculo.docx (somente leitura)</p>
+			</div>
+
+			<div class="janela-conteudo">
+				<div class="folha">
+					<h1 class="text-center">Murilo Spinoza de Arruda</h1>
+					<p class="text-center">Brasileiro. Solteiro. Data de nascimento: 03/05/1998.</p>
+					<p class="text-center">Celular: (15) 99621-4471. Email: murilo_spinoza@hotmail.com</p>
+					<p class="text-center sm-text">R. Prof. Edemir Antônio Digiampietri, 206 - Júlio de Mesquita Filho, Sorocaba - SP. 18053-130</p>
+
+					<h2>Resumo das Qualificações:</h2>
+					<ul>
+						<li>Bom relacionamento interpessoal;</li>
+						<li>Disposição para interagir de forma consciente e participativa em equipe;</li>
+						<li>Agilidade e rapidez para aprender e colocar em prática aquilo que é ensinado;</li>
+						<li>Criatividade e empenho para realizar tarefas e solucionar problemas.</li>
+					</ul>
+
+					<h2>Formação Acadêmica:</h2>
+					<ul>
+						<li>
+							Análise e Desenvolvimento de Sistemas
+							<ul>
+								<li>Faculdade de Tecnologia de Sorocaba (2016 - 2019)</li>
+							</ul>
+						</li>
+						<li>
+							Técnico em Informática
+							<ul>
+								<li>
+									ETEC Fernando Prestes (2014 - Julho de 2015)
+								</li>
+							</ul>
+						</li>
+						<li>
+							Ensino Médio completo
+							<ul>
+								<li>
+									ETEC Rubens de Faria e Souza (2013 - 2015)
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+					<h2>Conhecimentos em tecnologia:</h2>
+					<ul>
+						<li>Sistemas operacionais: Ubuntu e Windows.</li>
+						<li>
+							Experiência com:
+							<ul>
+								<li>Ionic 1 e 3, Angular, Typescript, JavaScript, Node, MySQL, PHP (CodeIgniter), Bootstrap, JQuery, SASS, HTML5, CSS;</li>						
+								<li>Consumo e desenvolvimento de APIs</li>
+							</ul>
+						</li>
+						<li>
+							Conhecimentos em:
+							<ul>
+								<li>C#, VB.NET, C, Java;</li>
+							</ul>
+						</li>
+						<li>Versionamento Git e SVN;</li>
+						<li>Arquitetura MVC;</li>
+					</ul>
+
+					<h2>Experiência Profissional:</h2>
+					<ul>
+						<li>
+							Helpper Soluções Inteligentes (julho/2016 – março/2017)
+							<ul>
+								<li>Foco em desenvolvimento web e mobile com ótima atuação fullstack;</li>
+								<li>Emprego de todas as tecnologias citadas acima, exceto VB, C e Java;</li>
+							</ul>
+						</li>
+					</ul>
+
+					<h2>Dados complementares:</h2>
+					<ul>
+						<li>Experiência com Scrum;</li>
+						<li>Escoteiro desde 2005: Cruzeiro do Sul, Lis de Ouro e Escoteiro da Pátria;</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="janela-footer">
+				<p>Pagina 1 de 1</p>
+				<p>219 palavras, 1.502 caracteres</p>
+				<p>Estilo padrão</p>
+				<p>Português (Brasil)</p>
+			</div>
+		</div>
+
+
+		<div class="janela" id="janela-portifolio" data-slide="1">
+			<div class="status-bar">
+				<i class="fechar" onclick="fechaJanela('show-portifolio')"></i>
+				<i class="minimizar"></i>
+				<i class="maximizar"></i>
+				<p class="descricao">projetos.ppt</p>
+			</div>
+
+			<div class="janela-conteudo">
+
+				<div class="folha" id="folha-1">
+					<img src="img/portifolio/conquista-pioneira.png">
+
+					<h2>Conquista Pioneira</h2>
+
+					<p>A plataforma é composta por um conjunto de recursos desenvolvidos para os membros do Movimento Escoteiro, para controle da Progressão Pessoal do Ramo Pioneiro.</p>
+					<p>Criada por um pioneiro, para pioneiros, ela permite registrar informações sobre cada competência, exportar estes registros e relaciona os integrantes de um mesmo clã, possibilitando um aperfeiçoamento coletivo.</p>
+
+					<p><em>Desenvolvi o aplicativo híbrido (Android e IOS) com Ionic 3, Typescript e Angular 4 e sua API em PHP. Também usei o conceito de PWA e gerei uma versão WEB</em></p>
+				</div>
+
+				<div class="folha" id="folha-2">
+					<img src="img/portifolio/granado.webp">
+					<h2>Granado Distribuidora</h2>
+					<p>O aplicativo surgiu da necessidade de facilitar a comunicação e realização de pedidos dos clientes com a Granado, empresa que atende num raio de até 150 quilômetros de Sorocaba - São Paulo.</p>
+					<p>Trabalhando na empresa Helpper Soluções em Tecnologia da Informação, fui o principal desenvolvedor desse projeto.</p>
+					<p>Está disponível nas lojas de aplicativos <a href="https://play.google.com/store/apps/details?id=apresente.se.granado" target="_blank">Android</a> e IOS.</p>
+				</div>
+				<div class="folha" id="folha-3">
+					<img src="img/portifolio/medicon.webp">
+					<h2>MEDICON</h2>
+
+					<p>O Portal Medicon foi desenvolvido especificamente para atender as solicitações contábeis e tributárias dos médicos de forma rápida e eficiente.</p>
+
+					<p>É uma ferramenta muito fácil de usar em que os médicos controlam os pagamentos de impostos, abrem suas empresas e muito mais.</p>
+
+					<p>Para a empresa de contabilidade, existe um sistema administrativo e, para seus clientes, um site e aplicativo.</p>
+				</div>
+
+				<div class="slide-control">
+					<div>
+						<span onclick="voltaSlide(3)"><< Anterior</span>
+					</div>
+					<div>
+						<span onclick="avancaSlide(3)">Próximo >></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="janela-footer">
+				<p>Página <span id="pagina-n">1</span> de 3</p>
+				<p>Estilo padrão</p>
+				<p>Português (Brasil)</p>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="efeitos.js"></script>
+	</body>
+</html>
+
+
+
+
+
+
